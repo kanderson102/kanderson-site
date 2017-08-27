@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/index.css'%}" xmlns:style="http://www.w3.org/1999/xhtml"/>
+<script type="text/javascript" src="{% static 'js/smooth-scroll.js' %}"></script>
+{% endblock %}
+
+{% block index %}
+<div class="hero-text container-fluid">
+    <h1>Kyle Anderson</h1>
+    <h4>Designer. Creator. Engineer.</h4>
+    </br>
+    <ul class="list-inline intro-social-buttons">
+        <li>
+            <a href="https://facebook.com/kyle.andeson" target="_blank" class="btn btn-default btn-md">
+                <i class="fa fa-facebook-official fa-fw"></i>
+                <span class="network-name">Facebook</span></a>
+        </li>
+        <li>
+            <a href="https://github.com/kanderson102" target="_blank" class="btn btn-default btn-md">
+                <i class="fa fa-github fa-fw"></i>
+                <span class="network-name">Github</span></a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/kyle-anderson-14703a55/" target="_blank"
+               class="btn btn-default btn-md">
+                <i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+        </li>
+    </ul>
+</div>
+
+
+<div id="About" class="container-fluid about-me">
+    <div class="row" style="padding-left:50px; padding-right: 50px;">
+        <div class="col-md-5">
+            <div class="prof-pic">
+                <img title="Woah!" class="pic1" src="{% static 'img/self.jpg' %}">
+                <img class="pic2" src="{% static 'img/me-tux.jpg' %}">
+
+            </div>
+        </div>
+</br>
+        <div class="col-lg-7">
+
+            <h1>Hello!</h1>
+            <h3>Would it be weird if that wasn't a picture of me?</h3>
+            <hr style="margin-top: 15px; margin-bottom: 15px">
+            <p class="lead">Yes. But I've been living in Austin long enough to know that being
+                weird is often encouraged. Especially after moving here from Florida. Yet, ironically, I had never
+                heard of the state's "strange" stereotype until moving out of it. I wouldn't say this off-beat
+                background led me to my current path, but I'm sure it helped.</p>
+        </div>
+
+        <div class="col-sm-12">
+            <p class="lead">In the summer of 2016 I began building a <a href="#Projects"><b>tiny house on
+                wheels</b></a>
+                with my friend while studying independently to become a software engineer - <a
+                        href="#Projects"><b>Python</b></a> being
+                my weapon of choice. Each has brought on its own challenges. From implementing
+                electrical wiring to understanding the command line, I've learned a lot. And it's not just
+                building, but designing, problem solving, and managing personal projects that has exercised some
+                of my deepest creative abilities to solve the inherent challenges of engineering something from
+                scratch.</p>
+            <p class="lead">Beyond these long term endeavors I do somehow manage a normal life. I
+                love sleep because it's like a time machine to breakfast. I enjoy reading, cooking, and
+                practicing
+                yoga and meditation in my free time and stay up too late when I don't have free time. Hiking to
+                hidden
+                water spots and travelling to see family has also been very rewarding since moving to Austin in the
+                Fall of 2014.</p></br>
+            <h2>My Goal for this blog...</h2>
+            <p class="lead">Is to teach and illustrate what I've learned. Whether it's a how-to guide or a story or
+                otherwise,
+                the narrative will be rich and informative. I'd like to help those just getting started in a format that
+                would have been useful for the beginner that's still inside of me.</p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+<div id="Projects" class="projects-grid">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 projects-heading">
+                <h1 class="title">(In)formal Education</h1>
+                <p class=" subtitle">When your side projects become your main goals in life, it is then that true
+                    passion reveals itself.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5" style="padding:20px">
+                <img title="Ready For Siding" src="{% static 'img/tiny-house.jpg' %}">
+                <h2 class="widget-title">The (Tiny) House</h2>
+                <p class="lead">What started as a desire to live minimally has manifested into reality</p>
+            </div>
+            <div class="col-md-5 col-md-offset-2 text-center" style="padding:20px">
+                <img title="$pip install cowsay" src="{% static 'img/cowsay.png' %}">
+                <h2 class="widget-title">Programming</h2>
+                <p class="lead" style="text-align:justify">This minimalistic tint started by the THOW has bled into my
+                    path towards
+                    programming,
+                    and Python
+                    has fulfilled this essence to the fullest with its simple syntax and powerful libraries.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="quote container-fluid">
+    <div class="quote-style">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3">
+                <p class="question-format">"You know where </br>you're going?"</p>
+                <p class="response-format">"Nope."</p>
+                <p class="question2-format">"I like the certainty."</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="Education" class="education">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 education-heading">
+                <h1 class="title">Formal Education</h1>
+                <p class="subtitle" style="text-align:center">My formidable years have been spent learning from books,
+                    professors, and
+                    mentors.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 edu-cols">
+                <i class="fa fa-graduation-cap fa-5x" aria-hidden="true"></i>
+                <h2 class="widget-title">The University of Florida</h2>
+                <h3>B.S. Industrial & Systems Engineering</h3>
+                <p class="lead" align="left">Software consultant working with IBM's CRM tool to implement salesforce
+                    management solutions to clients.</p>
+            </div>
+            <div class="col-md-5 col-md-offset-2 edu-cols">
+                <i class="fa fa-coffee fa-5x" aria-hidden="true"></i>
+                <h2 class="widget-title">OpenSymmetry</h2>
+                <h3>Sales Performance Management Consultant</h3>
+                <p class="lead" align="justify">Software consultant working with IBM's CRM tool
+                    to implement salesforce management solutions to clients.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container" style="height = 100%; text-align=center">
+    <h1>A Call To Action</h1>
+</div>
+{% endblock %}

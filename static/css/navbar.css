@@ -1,0 +1,14 @@
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 6px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.navbar-brand > img {
+    display: block;
+    width: 45px;
+    padding-bottom: 0;
+    top: 15px;
+}

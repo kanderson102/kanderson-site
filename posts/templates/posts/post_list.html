@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block head_title %}Blog | {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="container-fluid">
+        <div class="col-sm-8 col-sm-offset-2">
+            <h1 style="font-size:40px"><strong>{{ title }}</strong></h1>
+            <form method="GET" action="">
+                <input type="text" name="q" placeholder="Search posts..."
+                       value="{{ request.GET.q }}"/>
+                <input type="submit" value="Search"/>
+            </form>
+            <br/>
+
+            {% for obj in object_list %}
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="thumbnail" style="box-shadow: None; border: 0;">
+                        {% if obj.image %}
+                        <img src="{{ obj.image.url }}" class="img-responsive img-rounded"/>
+                        {% endif %}
+                        <div class="caption">
+                            <h1><a style="color:inherit" href="{{ obj.get_absolute_url }}"><strong>{{ obj.title }}</strong></a>
+                                <small>
+                                    {{ obj.publish }}
+                                    {% if obj.publish > today %}
+                                    <span style="color:red;">Future Post</span>
+                                    {% endif %}
+                                    {% if obj.draft %}
+                                    <span style="color:red;">Draft</span>
+                                    {% endif %}
+                                </small>
+                            </h1>
+                            {% if obj.user.get_full_name %}
+                            <p><strong>Author:</strong> {{ obj.user.get_full_name }}</p>
+                            {% endif %}
+                            <div style="margin-top:20px; margin-bottom:20px">
+                                <p>{{ obj.content|linebreaks|truncatechars:240 }}</p>
+                            </div>
+                            <p><a href="{{ obj.get_absolute_url }}" class="btn btn-default" role="button">View</a></p>
+                        </div>
+                    </div>
+                    <hr style="border-top: 1px solid #b9b9b9;">
+                </div>
+
+            </div>
+            {% endfor %}
+
+            <div class="pagination">
+        <span class="step-links">
+            {% if object_list.has_previous %}
+                <a href="?page={{ object_list.previous_page_number }}{% if request.GET.q %}}&q={{ request.GET.q }}{% endif %}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.
+            </span>
+
+            {% if object_list.has_next %}
+                <a href="?page={{ object_list.next_page_number }}{% if request.GET.q %}}&q={{ request.GET.q }}{% endif %}">next</a>
+            {% endif %}
+        </span>
+            </div>
+
+        </div>
+    </div>
+    <!--{% include 'posts/messages_display.html' %}-->
+</div>
+{% endblock %}

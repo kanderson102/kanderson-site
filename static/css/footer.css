@@ -1,0 +1,67 @@
+html, body {
+  height: 100%;
+}
+
+.footer {
+    background-color: #222;
+    width: 100%;
+    padding: 30px 0px;
+    color: #eaeaea;
+
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0px 10px;
+    list-style: none;
+}
+
+.footer ul li a {
+    color: #eaeaea;
+}
+
+div.footer-nav {
+    text-align: left;
+}
+div.footer-social {
+    text-align: center;
+    color: #eaeaea;
+}
+
+div.footer-creator {
+    text-align: right;
+    padding: 0px 10px;
+    color: #eaeaea;
+}
+
+.footer-nav a:visited {
+    text-decoration-line: none;
+    color:#eaeaea;
+}
+
+.footer-nav ul li a:hover {
+    text-decoration-line: none;
+    color:#939393;
+}
+
+.footer-creator a:hover {
+    text-decoration-line: none;
+    color:#939393;
+}
+
+.footer-nav a:active {
+    text-decoration-line: none;
+    color: #eaeaea !important;
+}
+
+.fb-hover:hover {
+    color:#4267b2;
+}
+
+.git-hover:hover {
+    color:#bcbcbc;
+}
+
+.li-hover:hover {
+    color:#0077B5;
+}

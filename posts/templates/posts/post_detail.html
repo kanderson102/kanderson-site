@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load urlify %}
+
+{% block head_title %}
+{{ instance.title }} | {{ block.super }}
+{% endblock head_title %}
+
+
+{% block content %}
+<div class="wrapper">
+    <div id="fb-root"></div>
+    <script src="{% static 'js/fb-SDK.js' %}"></script>
+
+    <div class="container-fluid">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="thumbnail" style="box-shadow: None; border: 0;">
+                        {% if instance.image %}
+                        <img src="{{ instance.image.url }}" class="img-responsive img-rounded"/>
+                        {% endif %}
+                        <div class="caption">
+                            <h1><strong>{{ title }}</strong>
+                                <small> {{ instance.publish }}
+                                    {% if instance.draft %}
+                                    <span style="color:red;">Draft</span>
+                                    {% endif %}
+                                </small>
+                            </h1>
+
+                            {% if instance.user.get_full_name %}
+                            <p><strong>Author:</strong> {{ instance.user.get_full_name }}</p>
+                            {% endif %}
+
+                            <p>
+                            <div class="fb-like" data-href="{{ request.build_absolute.uri}}" data-layout="button_count"
+                                 data-action="like"
+                                 data-size="small" data-show-faces="true" data-share="true"></div>
+                            </p>
+
+
+                            <p>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute.uri}}">
+                                    Facebook
+                                </a> |
+                                <a href="https://twitter.com/home?status={{ instance.content|urlify }}%20{{ request.build_absolute.uri}}">
+                                    Twitter
+                                </a> |
+                                <a href='https://plus.google.com/share?url={{ request.build_absolute.uri}}'>Google
+                                    Plus</a>
+                                |
+                                <a href="http://www.reddit.com/submit?url={{ request.build_absolute.uri}}/&title={{ instance.title}}">Reddit</a>
+                            </p>
+
+                            <hr/>
+                            {{ instance.content|linebreaks }}</br>
+                            </br>
+                            <div style="margin-top:50px; margin-bottom: 50px;">
+                                <div class="fb-comments" data-href="{{ request.build_absolute.uri}}"
+                                     data-numposts="5"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% include 'posts/messages_display.html' %}
+        </div>
+    </div>
+</div>
+{% endblock content %}
