@@ -1,6 +1,7 @@
 #my ignores
 mysite/
-
+.idea
+manage.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
