@@ -1,0 +1,6 @@
+Django==1.11.3
+django-static-precompiler==1.6
+olefile==0.44
+Pillow==4.2.0
+
+pytz==2017.2
