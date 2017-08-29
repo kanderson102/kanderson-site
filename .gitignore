@@ -1,5 +1,6 @@
 #my ignores
 mysite/
+kanderson_site/
 .idea
 manage.py
 
