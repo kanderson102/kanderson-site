@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 
+{% block head_title %}Create | {{ block.super }}{% endblock %}
+
 {% block content %}
-</br></br></br>
+<div class="wrapper">
+    <div class="container-fluid">
 
 <div class="col-sm-8 col-sm-offset-2">
 <h1>Form</h1>
@@ -11,6 +14,7 @@
 <input type="submit" class="btn btn-default" value="Create Post">
 </form>
 </div>
-
+</div>
+</div>
 
 {% endblock content %}
