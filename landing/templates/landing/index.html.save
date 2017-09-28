@@ -94,12 +94,16 @@
             <div class="col-md-5" style="padding:20px">
                 <img title="Ready For Siding" src="{% static 'img/tiny-house.jpg' %}">
                 <h2 class="widget-title">The (Tiny) House</h2>
-                <p class="lead">What started as a desire to live minimally has manifested into reality. Not seen are the labyrinth of hidden systems that most don't appreciate in their home. The complexities of a building are woven elegantly in to the most practical asset in your life: your home.</p>
+                <p class="lead">What started as a desire to live minimally has manifested into reality</p>
             </div>
             <div class="col-md-5 col-md-offset-2 text-center" style="padding:20px">
                 <img title="$pip install cowsay" src="{% static 'img/cowsay.png' %}">
                 <h2 class="widget-title">Programming</h2>
-                <p class="lead" style="text-align:justify">This minimalistic tint started by the THOW has bled into my path towards programming, and Python has fulfilled this essence to the fullest with its simple syntax and powerful libraries. My main focus right now is data visualization and the power of dynamic, realtime web apps.</p>
+                <p class="lead" style="text-align:justify">This minimalistic tint started by the THOW has bled into my
+                    path towards
+                    programming,
+                    and Python
+                    has fulfilled this essence to the fullest with its simple syntax and powerful libraries.</p>
             </div>
         </div>
     </div>
@@ -108,10 +112,10 @@
 <div class="quote container-fluid">
     <div class="quote-style">
         <div class="row">
-            <div class="col-xs-8 col-xs-offset-2">
-                <p class="question-format">"The balance of power shifts on the Internet to the individual."</p>
-                <p class="question-format">"Everyone's drunk on the term 'blog'."</p>
-                <p class="response-format">- Jason Calacanis</p>
+            <div class="col-xs-6 col-xs-offset-3">
+                <p class="question-format">"You know where </br>you're going?"</p>
+                <p class="response-format">"Nope."</p>
+                <p class="question2-format">"I like the certainty."</p>
             </div>
         </div>
     </div>
@@ -132,13 +136,20 @@
                 <i class="fa fa-graduation-cap fa-5x" aria-hidden="true"></i>
                 <h2 class="widget-title">The University of Florida</h2>
                 <h3>B.S. Industrial & Systems Engineering</h3>
-                <p class="lead" align="left">From a soft piece of clay to the sculptor himself, many fulfilling experiences were forged here. In an efficiency-focused major I gained the perspective of a business mindset applied towards engineering applications. For my senior design project my team and I built a software tool for Crowley Maritime to standardize their ship bidding processess, saving them time and money from increased efficiency and error reduction. It was this direct experience that allowed me to get a job at OpenSymmetry...</p>
+                <p class="lead" align="left">Focused on process-driven projects that
+		increased efficiency and decreased costs. These included a shipment
+		bidding tool for Crowley Maritime that standardized forms between
+		contractors; optimized truck routes using JIT delivery methods; 
+		tracked campus bus routes to gain statistical insight into their 
+		scheduled routes.</p>
             </div>
             <div class="col-md-5 col-md-offset-2 edu-cols">
                 <i class="fa fa-coffee fa-5x" aria-hidden="true"></i>
                 <h2 class="widget-title">OpenSymmetry</h2>
                 <h3>Sales Performance Management Consultant</h3>
-                <p class="lead" align="justify">As my first job outside of school I certainly landed in a fortunate spot. Great mentorship allowed me to grow and apply myself in challenging roles. I became comfortable working with clients through our software implementation lifecycle: from requirements gathering and design through building, testing, and go-live using Xactlys or IBMs incentive-based management solution.</p>
+                <p class="lead" align="justify">Software consultant working with 
+		IBM's CRM tool to implement salesforce management solutions to 
+		clients. </p>
             </div>
 
         </div>
@@ -149,26 +160,9 @@
     <div class="quote-style">
         <div class="row">
             <div class="col-xs-6 col-xs-offset-3">
-            </br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+                <p class="question-format">"Feel free to reach out. I specialize in furniture building and data visualization web apps and would love to collaborate with you on a new project."</p>
             </div>
         </div>
     </div>
 </div>
-
-<div class="container-fluid" style="background-color: white; height: 100%; padding: 50px 50px 50px 50px">
-        <div class="row">
-            <div class="col-xs-6 col-xs-offset-3">
-                <h2 class="widget-title">Let's Work Together!</h2>
-                <p class="lead" align="justify">I specialize in furniture building and data visualization web apps and would love to collaborate with you on a new project. Feel free to reach out and schedule a meeting to discuss your project. Here's a copy of my resume if you're hiring. </p>
-            </br>
-                <div style="text-align: center;">
-                    <a href="{% static 'docs/Resume.pdf' %}" target="_blank" class="btn btn-default btn-lg">
-                    <span class="network-name">Resume</span></a>
-                </br>
-                </div>
-                
-            </div>
-        </div>
-</div>
-
 {% endblock %}
