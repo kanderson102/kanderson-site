@@ -11,6 +11,19 @@
 <div class="wrapper">
     <div id="fb-root"></div>
     <script src="{% static 'js/fb-SDK.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".content-markdown").each(function(){
+            var content = $(this).text()
+            console.log(content)
+            var markedContent = marked(content)
+            console.log(markedContent)
+            $(this).html(markedContent)
+        })
+        
+    })
+    </script>
 
     <div class="container-fluid">
         <div class="col-sm-8 col-sm-offset-2">
@@ -54,7 +67,9 @@
                             </p>
 
                             <hr/>
-                            {{ instance.content|linebreaks }}</br>
+                            <div class='content-markdown'>{{ instance.content|safe }}</div>
+                            <!-- <div content-markdown></div> -->
+                            </br>
                             </br>
                             <div style="margin-top:50px; margin-bottom: 50px;">
                                 <div class="fb-comments" data-href="{{ request.build_absolute.uri}}"
