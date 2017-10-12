@@ -23,7 +23,7 @@
                         <img src="{{ obj.image.url }}" class="img-responsive img-rounded"/>
                         {% endif %}
                         <div class="caption">
-                            <h1><a style="color:inherit" href="{{ obj.get_absolute_url }}"><strong>{{ obj.title }}</strong></a>
+                            <h1><a style="color:inherit" href="{{ obj.get_absolute_url }}"><strong>{{ obj.title }}</strong></a></br>
                                 <small>
                                     {{ obj.publish }}
                                     {% if obj.publish > today %}
@@ -38,7 +38,7 @@
                             <p><strong>Author:</strong> {{ obj.user.get_full_name }}</p>
                             {% endif %}
                             <div style="margin-top:20px; margin-bottom:20px">
-                                <p class="content-markdown">{{ obj.content|truncatechars:240 }}</p>
+                                <p class="content-markdown">{{ obj.content|truncatechars:500 }}</p>
                             </div>
                             <p><a href="{{ obj.get_absolute_url }}" class="btn btn-default" role="button">View</a></p>
                         </div>
