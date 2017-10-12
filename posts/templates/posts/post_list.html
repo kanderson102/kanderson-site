@@ -3,6 +3,7 @@
 {% block head_title %}Blog | {{ block.super }}{% endblock %}
 
 {% block content %}
+
 <div class="wrapper">
     <div class="container-fluid">
         <div class="col-sm-8 col-sm-offset-2">
@@ -37,7 +38,7 @@
                             <p><strong>Author:</strong> {{ obj.user.get_full_name }}</p>
                             {% endif %}
                             <div style="margin-top:20px; margin-bottom:20px">
-                                <p>{{ obj.content|truncatechars:240|safe }}</p>
+                                <p class="content-markdown">{{ obj.content|truncatechars:240 }}</p>
                             </div>
                             <p><a href="{{ obj.get_absolute_url }}" class="btn btn-default" role="button">View</a></p>
                         </div>
